@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mausposition</title>
+        <script>
+            function readMouseMovement(e) {
+                var x = document.getElementById('x_achse');
+                var y = document.getElementById('y_achse');
+                x.innerHTML = e.clientX;
+                y.innerHTML = e.clientY;
+            }
+
+            document.onmousemove = readMouseMovement;
+        </script>
+    </head>
+    <body>
+        <h1>Mausposition</h1>
+        <h2 id="x_achse">0</h2>
+        <h2 id="y_achse">0</h2>
+    </body>
+</html>
