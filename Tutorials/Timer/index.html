@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Timer</title>
+        <script>
+            function countDown(sec) {
+                var element = document.getElementById("status");
+                element.innerHTML = "Bitte warten sie noch " + sec + " Sekunden."
+                if (sec < 1) {
+                    clearTimeout(timer);
+                    window.location.assign("https://github.com/cyklan");
+                }
+
+                sec--;
+                var timer = setTimeout("countDown(" + sec + ")", 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="status"></div>
+        <script>countDown(10);</script>
+    </body>
+</html>
