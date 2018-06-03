@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Collatz Conjecture</title>
+    <script>
+        let count = 0;
+
+        function collatz(n) {
+            if (n == 1) {
+                console.log(count);
+                count = 0;
+                return;
+            }
+            count++;
+
+            if (n % 2 == 0) 
+                n /= 2;
+            else 
+                n = n * 3 + 1;
+            collatz(n);
+        }
+    </script>
+</head>
+
+<body>
+    <input id="zahl" type="number" min=2 value=2>
+    <button onclick="collatz(document.getElementById('zahl').value);">Drück mich</button>
+</body>
+
+</html>
